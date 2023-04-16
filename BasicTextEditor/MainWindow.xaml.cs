@@ -119,6 +119,24 @@ namespace BasicTextEditor
                 
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (FontFamily fontFamily in Fonts.SystemFontFamilies)
+            {
+                FontFamilyComboBox.Items.Add(fontFamily);
+            }
+            FontFamilyComboBox.SelectedIndex= 0;
         }
+
+        private void FontFamilyComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FontFamily selectedFontFamily = FontFamilyComboBox.SelectedItem as FontFamily;
+            if (selectedFontFamily != null)
+            {
+                myTextBox.FontFamily = selectedFontFamily;
+            }
+        }
+    }
     }
 

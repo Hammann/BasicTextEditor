@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Loaded="Window_Loaded"
         mc:Ignorable="d"
         Title="Best Text Editor" Height="500" Width="500">
     <DockPanel Background="DarkGray">
@@ -39,6 +39,8 @@
                     <ComboBoxItem Tag="Red">Red</ComboBoxItem>
                     <ComboBoxItem Tag="Green">Green</ComboBoxItem>
                     <ComboBoxItem Tag="Blue">Blue</ComboBoxItem>
+                </ComboBox>
+                <ComboBox x:Name="FontFamilyComboBox" Width="120" SelectionChanged="FontFamilyComboBox_SelectionChanged">
                 </ComboBox>
             </ToolBar>
         </ToolBarTray>
